@@ -31,12 +31,12 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-parachute-box"></i></div>
                                 Suppliers
                             </a>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="shippers.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-truck-field"></i></div>
                                 Shippers
                             </a>
                             <div class="sb-sidenav-menu-heading">Management</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="employees.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 Employees
                             </a>
