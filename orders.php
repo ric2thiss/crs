@@ -5,19 +5,19 @@
 
 
     // Container or Main element in HTML
-    // include 'templates/template_main_container.php';
-    include 'templates/customer_table.php';
+
+    include 'templates/orders_table.php';
 
     // Footer element
     include 'templates/template_footer.php';
 
 
     // BackEnd 
-    include 'functions/customer.php';
+    include 'functions/orders.php';
 
 ?>
 
-<?=template_header( 'Customers - Records' )?>
+<?=template_header( 'Orders - Records' )?>
     <body class="sb-nav-fixed">
         <!-- Top Navigation -->
         <?=template_top_nav()?>
@@ -27,7 +27,7 @@
             <div id="layoutSidenav_content">
                 <!-- Main -->
                 <main>
-                    <?=customer_table()?>
+                    <?=orders_table()?>
                 </main>
                 <!-- Footer -->
 

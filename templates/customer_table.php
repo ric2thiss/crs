@@ -11,6 +11,8 @@
         $customer_count = fetch_customers_count();
         
 
+        $errMsg = ""; // Initialize error message variable
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (empty($_POST["customername"]) || 
                 empty($_POST["contactname"]) || 
@@ -21,12 +23,12 @@
                 $errMsg = "All fields are required!";
             } else {
                 // Process the form data
-                $customerName =  sanitizeInput($_POST["customername"]);
-                $contactName =  sanitizeInput($_POST["contactname"]);
-                $address =  sanitizeInput($_POST["address"]);
-                $city =  sanitizeInput($_POST["city"]);
-                $postalCode =  sanitizeInput($_POST["postal"]);
-                $country =  sanitizeInput($_POST["country"]);
+                $customerName = sanitizeInput($_POST["customername"]);
+                $contactName = sanitizeInput($_POST["contactname"]);
+                $address = sanitizeInput($_POST["address"]);
+                $city = sanitizeInput($_POST["city"]);
+                $postalCode = sanitizeInput($_POST["postal"]);
+                $country = sanitizeInput($_POST["country"]);
                 
                 // Insert into database or any other processing
                 if (create_new_customer($customerName, $contactName, $address, $city, $postalCode, $country)) {
@@ -35,7 +37,7 @@
                     echo "Failed to create new customer.";
                 }
             }
-        }
+}
 
         ?>
             <div class="container-fluid px-4">
@@ -44,6 +46,9 @@
                             <li class="breadcrumb-item active">Records</li>
                         </ol> -->
                         <hr>
+                        <?php if (!empty($errMsg)): ?>
+                        <p style="color: red;"><?php echo $errMsg; ?></p>
+                        <?php endif; ?>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -79,11 +84,11 @@
                                             <label for="country" class="form-label">Country</label>
                                             <input type="text" name="country"  class="form-control" id="country">
                                         </div>
+                                        <input type="submit" name="submit" class="btn btn-primary" value="Submit">
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <input type="submit" name="submit" class="btn btn-primary" value="Submit">
                                 </div>
                                 </div>
                             </div>
