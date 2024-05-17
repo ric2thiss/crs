@@ -5,53 +5,56 @@
         $data = htmlspecialchars($data);
         return $data;
     }
-    function orders_table(){
+    function products_table(){
 
-        $orders = fetch_orders();
-        $orders_count = fetch_order_count();
+        $products = fetch_products();
+        $products_count = fetch_products_count();
         
         ?>
             <div class="container-fluid px-4">
-                        <h1 class="mt-4 mb-4">Orders - Records</h1>
+                        <h1 class="mt-4 mb-4">Products - Records</h1>
     
                         <hr>
     
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Current Count of Orders - <span><?php echo $orders_count ?></span>
-                                <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><li class="fa fa-add"></li> Add Orders</button>
+                                Current Count of Products - <span><?php echo $products_count?></span>
+                                <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><li class="fa fa-add"></li> Add Products</button>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple" class="table">
                                     <thead>
                                         <tr>
-                                            <th>OrderID</th>
-                                            <th>CustomerID</th>
-                                            <th>EmployeeID</th>
-                                            <th>OrderDate</th>
-                                            <th>ShipperID</th>
+                                            <th>ProductID</th>
+                                            <th>ProductName</th>
+                                            <th>SupplierID</th>
+                                            <th>CategoryID</th>
+                                            <th>Unit</th>
+                                            <th>Price</th>
                                             <th>Actions</th> <!-- Added a new column for actions -->
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>OrderID</th>
-                                            <th>CustomerID</th>
-                                            <th>EmployeeID</th>
-                                            <th>OrderDate</th>
-                                            <th>ShipperID</th>
+                                            <th>ProductID</th>
+                                            <th>ProductName</th>
+                                            <th>SupplierID</th>
+                                            <th>CategoryID</th>
+                                            <th>Unit</th>
+                                            <th>Price</th>
                                             <th>Actions</th> <!-- Added a new column for actions -->
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <?php foreach ($orders as $order) { ?>
+                                        <?php foreach ($products as $product) { ?>
                                             <tr>
-                                                <td><?php echo $order['OrderID'] ?></td>
-                                                <td><?php echo $order['CustomerID'] ?></td>
-                                                <td><?php echo $order['EmployeeID'] ?></td>
-                                                <td><?php echo $order['OrderDate'] ?></td>
-                                                <td><?php echo $order['ShipperID'] ?></td>
+                                                <td><?php echo $product['ProductID'] ?></td>
+                                                <td><?php echo $product['ProductName'] ?></td>
+                                                <td><?php echo $product['SupplierID'] ?></td>
+                                                <td><?php echo $product['CategoryID'] ?></td>
+                                                <td><?php echo $product['Unit'] ?></td>
+                                                <td><?php echo $product['Price'] ?></td>
                                                 <td>
                                                     <button class="btn btn-primary">Edit</button>
                                                     <button class="btn btn-danger">Delete</button>

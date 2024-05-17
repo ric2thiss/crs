@@ -1,16 +1,16 @@
 <?php
 
-function fetch_products_count(){
+function fetch_suppliers_count(){
         $conn = db_conn();
     
-        $stmt = $conn->query('SELECT COUNT(*) from products');
+        $stmt = $conn->query('SELECT COUNT(*) from suppliers');
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result['COUNT(*)'];
 }
 
-function fetch_products(){
+function fetch_suppliers(){
     $conn = db_conn();
-    $stmt = $conn->query('SELECT * FROM products');
+    $stmt = $conn->query('SELECT * FROM suppliers');
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
