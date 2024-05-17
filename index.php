@@ -13,6 +13,8 @@
 
     // BackEnd 
     include 'functions/customer.php';
+    include 'functions/orders.php';
+    include 'functions/products.php';
 
 ?>
 

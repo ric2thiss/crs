@@ -14,6 +14,7 @@
 
     // BackEnd 
     include 'functions/orders.php';
+    include 'functions/db.php';
 
 ?>
 

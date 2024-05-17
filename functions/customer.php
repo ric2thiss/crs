@@ -1,7 +1,5 @@
 <?php
-
     include 'db.php';
-
     function fetch_customers(){
         $conn = db_conn();
 
@@ -44,22 +42,6 @@
             echo "Error: " . $e->getMessage();
             return false;
         }
-    }
-
-    function fetch_order_count(){
-        $conn = db_conn();
-    
-        $stmt = $conn->query('SELECT COUNT(*) from orders');
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $result['COUNT(*)'];
-    }
-
-    function fetch_products_count(){
-        $conn = db_conn();
-    
-        $stmt = $conn->query('SELECT COUNT(*) from products');
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $result['COUNT(*)'];
     }
 
 
