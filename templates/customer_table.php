@@ -55,6 +55,7 @@
                         <p style="color: red;"><?php echo $errMsg; ?></p>
                         <?php endif; ?>
                         <!-- Modal -->
+                          <!-- Adding Customer Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -145,7 +146,7 @@
                                                         <td><?php echo $customer['PostalCode'] ?></td>
                                                         <td><?php echo $customer['Country'] ?></td>
                                                         <td>
-                                                            <a href="" class="btn btn-primary">Edit</a>
+                                                            <a href="customer_update.php?id=<?php echo $customer['CustomerID'] ?>" class="btn btn-primary">Edit</a>
                                                             <a href='delete.php?id=<?php echo $customer['CustomerID'] ?>' class="btn btn-danger">Delete</a>
                                                         </td>
                                                     </tr>
