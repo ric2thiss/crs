@@ -32,7 +32,12 @@
                 
                 // Insert into database or any other processing
                 if (create_new_customer($customerName, $contactName, $address, $city, $postalCode, $country)) {
-                    echo "New customer created successfully!";
+                    echo "
+                    <script>
+                        alert('Successfully created new customer')
+                        window.location = 'customers.php'
+                    </script>
+                    ";
                 } else {
                     echo "Failed to create new customer.";
                 }
@@ -140,8 +145,8 @@
                                                         <td><?php echo $customer['PostalCode'] ?></td>
                                                         <td><?php echo $customer['Country'] ?></td>
                                                         <td>
-                                                            <button href='' class="btn btn-primary">Edit</button>
-                                                            <button href='' class="btn btn-danger">Delete</button>
+                                                            <a href="" class="btn btn-primary">Edit</a>
+                                                            <a href='delete.php?id=<?php echo $customer['CustomerID'] ?>' class="btn btn-danger">Delete</a>
                                                         </td>
                                                     </tr>
                                                     <?php
