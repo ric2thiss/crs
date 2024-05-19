@@ -156,8 +156,8 @@ function employees_table() {
                                     </span>
                                 </td>
                                 <td>
-                                    <button class="btn btn-primary">Edit</button>
-                                    <button class="btn btn-danger">Delete</button>
+                                    <a href="employees_update.php?id=<?php echo $employee['EmployeeID']; ?>" class="btn btn-primary">Edit</a>
+                                    <a href="delete_employee.php?id=<?php echo $employee['EmployeeID']; ?>" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         <?php } ?>
