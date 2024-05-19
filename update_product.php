@@ -6,7 +6,7 @@
 
     // Container or Main element in HTML
 
-    include 'templates/products_table.php';
+    include 'templates/product_update.php';
 
     // Footer element
     include 'templates/template_footer.php';
@@ -30,7 +30,7 @@
             <div id="layoutSidenav_content">
                 <!-- Main -->
                 <main>
-                    <?=products_table()?>
+                    <?=product_update()?>
                 </main>
                 <!-- Footer -->
 
