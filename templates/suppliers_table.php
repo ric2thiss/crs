@@ -104,7 +104,7 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Current Count of Categories - <span><?php echo $suppliers_count?></span>
+                                Current Count of Suppliers - <span><?php echo $suppliers_count?></span>
                                 <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><li class="fa fa-add"></li> Add Supplier</button>
                             </div>
                             <div class="card-body">
