@@ -16,11 +16,8 @@ function fetch_category(){
 }
 
 
-function create_new_category($categoryname, $description){
 
-}
-
-function create_new_customer($categoryname, $description) {
+function create_new_category($categoryname, $description) {
     // Establish a database connection
     $conn = db_conn();
 

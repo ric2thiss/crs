@@ -22,7 +22,7 @@
                 $description = sanitizeInput($_POST["description"]);
                 
                 // Insert into database or any other processing
-                if (create_new_customer($categoryname, $description)) { // Changed to create_new_customer
+                if (create_new_category($categoryname, $description)) { // Changed to create_new_customer
                     echo "
                     <script>
                         alert('Successfully created new category');
