@@ -15,4 +15,11 @@ function fetch_shippers(){
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+function insert_shipper_to_database($shipperName, $phone) {
+    $conn = db_conn();
+    $stmt = $conn->prepare("INSERT INTO shippers (ShipperName, Phone) VALUES (?, ?)");
+    return $stmt->execute([$shipperName, $phone]);
+}
+
+
 ?>
