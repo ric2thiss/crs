@@ -13,8 +13,12 @@
 
 
     // BackEnd 
+    include 'functions/customer.php';
     include 'functions/orders.php';
-    include 'functions/db.php';
+    include 'functions/employee.php';
+    include 'functions/shippers.php';
+    // Database
+    // include 'functions/db.php';
 
 ?>
 

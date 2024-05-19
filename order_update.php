@@ -5,7 +5,8 @@
 
 
     // Container or Main element in HTML
-    include 'templates/template_main_container.php';
+
+    include 'templates/orders_update.php';
 
     // Footer element
     include 'templates/template_footer.php';
@@ -14,12 +15,15 @@
     // BackEnd 
     include 'functions/customer.php';
     include 'functions/orders.php';
-    include 'functions/products.php';
-    include 'functions/employee.php'
+    include 'functions/employee.php';
+    include 'functions/shippers.php';
+
+    // Database
+    // include 'functions/db.php';
 
 ?>
 
-<?=template_header( 'Dashboard' )?>
+<?=template_header( 'Orders - Records' )?>
     <body class="sb-nav-fixed">
         <!-- Top Navigation -->
         <?=template_top_nav()?>
@@ -29,7 +33,7 @@
             <div id="layoutSidenav_content">
                 <!-- Main -->
                 <main>
-                    <?=template_main_container()?>
+                    <?=orders_update()?>
                 </main>
                 <!-- Footer -->
 
