@@ -103,7 +103,7 @@
                                                 <td><?php echo $category['CategoryName'] ?></td>
                                                 <td><?php echo $category['Description'] ?></td>
                                                 <td>
-                                                    <a href="edit_category.php?id=<?php echo $category['CategoryID'] ?>" class="btn btn-primary">Edit</a>
+                                                    <a href="category_update.php?id=<?php echo $category['CategoryID'] ?>" class="btn btn-primary">Edit</a>
                                                     <a href='delete_category.php?id=<?php echo $category['CategoryID'] ?>' class="btn btn-danger">Delete</a>
                                                 </td>
                                             </tr>
