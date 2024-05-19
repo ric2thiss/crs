@@ -15,4 +15,36 @@ function fetch_category(){
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+
+function create_new_category($categoryname, $description){
+
+}
+
+function create_new_customer($categoryname, $description) {
+    // Establish a database connection
+    $conn = db_conn();
+
+    try {
+        // Prepare the SQL statement
+        $stmt = $conn->prepare('INSERT INTO categories (CategoryName, Description)
+                                VALUES (:CategoryName, :Description)');
+
+        // Bind parameters
+        $stmt->bindParam(':CategoryName', $categoryname);
+        $stmt->bindParam(':Description', $description);
+
+        // Execute the statement
+        $stmt->execute();
+
+        // If the execution is successful, return true
+        return true;
+    } catch (PDOException $e) {
+        // Display error message
+        echo "Error: " . $e->getMessage();
+        return false;
+    }
+}
+
+
+
 ?>
