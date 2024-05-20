@@ -23,6 +23,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-filter"></i></div>
                                 Orders
                             </a>
+                            <a class="nav-link" href="order_details.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
+                                Orders Details
+                            </a>
                             <a class="nav-link" href="products.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-cart-shopping"></i></div>
                                 Products
