@@ -4,7 +4,7 @@
 
     function fetch_orders(){
         $conn = db_conn();
-        $stmt = $conn->query('SELECT * FROM orders');
+        $stmt = $conn->query('SELECT * FROM orders order by OrderID DESC');
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }

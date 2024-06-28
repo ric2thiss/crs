@@ -84,7 +84,7 @@
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 Current Count of Shippers - <span><?php echo $shippers_count?></span>
-                                <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><li class="fa fa-add"></li> Add Products</button>
+                                <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><li class="fa fa-add"></li> Add Shippers</button>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple" class="table">

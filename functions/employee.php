@@ -10,7 +10,7 @@ function fetch_employees_count(){
 
 function fetch_employees(){
     $conn = db_conn();
-    $stmt = $conn->query('SELECT * FROM employee');
+    $stmt = $conn->query('SELECT * FROM employee ORDER BY EMPLOYEEID DESC');
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
