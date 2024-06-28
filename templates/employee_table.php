@@ -178,6 +178,7 @@ function employees_table() {
                                 <td><?php echo $employee['BirthDate']; ?></td>
                                 <td><img src="photos/<?php echo $employee['Photo'];?>" width ="100px"></td>
                                 <td>
+
                                     <span style="
                                         display: block;
                                         width: 250px;
@@ -193,7 +194,6 @@ function employees_table() {
                                 </td>
                             </tr>
                             <?php
-                            
                             }
                         ?>
                         <!-- Diri ibalik -->
